@@ -31,13 +31,13 @@ function SelectedWork() {
         <div className="relative grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
           <div>
             <div className="mb-6 flex flex-wrap items-center gap-3">
-              <span className="rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300">
-                In development
-              </span>
+                <span className="rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300">
+                    In development
+                </span>
 
-              <span className="text-sm text-slate-400">
-                Web & mobile ecosystem
-              </span>
+                <span className="text-sm text-slate-400">
+                    Mobile app + admin panel + backend API
+                </span>
             </div>
 
             <h3 className="text-3xl font-bold text-white md:text-4xl">
@@ -45,31 +45,31 @@ function SelectedWork() {
             </h3>
 
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
-              A full-stack application designed to support pilgrimage
-              organization. The system includes an admin panel, route
-              management, daily schedules, stops, announcements, songbook and
-              regulations.
+                A full-stack system designed to support pilgrimage organization.
+                It combines a mobile application, administrative panel, backend API
+                and relational database. The system includes daily schedules, route
+                management, stops, announcements, songbook and regulations.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <div className="rounded-2xl border border-white/10 bg-black/10 p-4">
                 <p className="text-sm text-slate-400">Focus</p>
                 <p className="mt-2 font-semibold text-white">
-                  Practical utility
+                  Real-world use
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-black/10 p-4">
                 <p className="text-sm text-slate-400">Role</p>
                 <p className="mt-2 font-semibold text-white">
-                  Full-stack development
+                  Mobile + web + API
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-black/10 p-4">
                 <p className="text-sm text-slate-400">Status</p>
                 <p className="mt-2 font-semibold text-white">
-                  Work in progress
+                  In development
                 </p>
               </div>
             </div>
@@ -93,8 +93,9 @@ function SelectedWork() {
 
             <div className="mt-8 border-t border-white/10 pt-6">
               <p className="text-sm leading-7 text-slate-400">
-                The project is being built as a real-world system with backend
-                API, relational database and an administrative interface.
+                Built as a real-world project, not a tutorial. The system connects
+                a mobile experience for participants with an administrative interface
+                for organizers and a backend responsible for data management.
               </p>
             </div>
           </div>
