@@ -25,7 +25,7 @@ function SelectedWork() {
         </p>
       </div>
 
-      <article className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025] p-8 transition-all duration-300 hover:border-blue-500/30 hover:bg-white/[0.04] hover:shadow-2xl hover:shadow-blue-950/20 md:p-10">
+      <article className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025] p-6 transition-all duration-300 hover:border-blue-500/30 hover:bg-white/[0.04] hover:shadow-2xl hover:shadow-blue-950/20 md:p-10">
         <div className="pointer-events-none absolute right-0 top-0 h-64 w-64 translate-x-1/3 -translate-y-1/3 rounded-full bg-blue-500/10 blur-3xl" />
 
         <div className="relative grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
@@ -75,7 +75,7 @@ function SelectedWork() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6">
+          <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-5 md:p-6">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
               Technologies
             </p>

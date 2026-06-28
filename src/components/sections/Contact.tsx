@@ -9,7 +9,7 @@ function Contact() {
 
       <div className="mt-6 grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-end">
         <div>
-          <h2 className="max-w-3xl text-4xl font-bold text-white md:text-5xl">
+          <h2 className="max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
             Let’s build something useful.
           </h2>
 

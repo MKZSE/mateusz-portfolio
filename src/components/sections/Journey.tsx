@@ -50,7 +50,7 @@ function Journey() {
           {journeyItems.map((item) => (
             <article
               key={item.title}
-              className="relative rounded-3xl border border-white/10 bg-white/[0.025] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/30 hover:bg-white/[0.04] md:ml-12"
+              className="relative rounded-3xl border border-white/10 bg-white/[0.025] p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/30 hover:bg-white/[0.04] md:ml-12"
             >
               <div className="absolute -left-[3.25rem] top-10 hidden h-4 w-4 rounded-full border border-blue-400 bg-slate-950 md:block" />
 
