@@ -6,6 +6,8 @@ import Hero from "./components/sections/Hero";
 import HowIWork from "./components/sections/HowIWork";
 import SelectedWork from "./components/sections/SelectedWork";
 import Journey from "./components/sections/Journey";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -41,12 +43,24 @@ function App() {
         <Section
         id="journey"
         scrollMargin="scroll-mt-4"
-        className="pt-8 md:pt-10"
+        className="pt-8 pb-8 md:pt-10 md:pb-10"
         >
             <Container>
                 <Journey />
             </Container>
         </Section>
+
+        <Section
+        id="contact"
+        scrollMargin="scroll-mt-4"
+        className="pt-8 pb-16 md:pt-10 md:pb-20"
+        >
+            <Container>
+                <Contact />
+            </Container>
+        </Section>
+
+    <Footer />
     </>
   );
 }
