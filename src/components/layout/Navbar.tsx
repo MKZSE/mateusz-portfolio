@@ -1,14 +1,32 @@
 import { useState } from "react";
+import type { Dispatch, SetStateAction } from "react";
+import type { Language } from "../../data/content";
 
-const navigationLinks = [
-  { label: "Approach", href: "#approach" },
-  { label: "Selected Work", href: "#projects" },
-  { label: "Journey", href: "#journey" },
-  { label: "Contact", href: "#contact" },
-];
+type NavbarProps = {
+  nav: {
+    approach: string;
+    projects: string;
+    journey: string;
+    contact: string;
+  };
+  language: Language;
+  setLanguage: Dispatch<SetStateAction<Language>>;
+};
 
-function Navbar() {
+function Navbar({ nav, language, setLanguage }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navigationLinks = [
+    { label: nav.approach, href: "#approach" },
+    { label: nav.projects, href: "#projects" },
+    { label: nav.journey, href: "#journey" },
+    { label: nav.contact, href: "#contact" },
+  ];
+
+  function toggleLanguage() {
+    setLanguage((current) => (current === "pl" ? "en" : "pl"));
+    setIsOpen(false);
+  }
 
   return (
     <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
@@ -31,6 +49,14 @@ function Navbar() {
               {link.label}
             </a>
           ))}
+
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200 transition-colors hover:bg-white/[0.08] hover:text-white"
+          >
+            {language === "pl" ? "EN" : "PL"}
+          </button>
         </div>
 
         <button
@@ -61,6 +87,14 @@ function Navbar() {
                 {link.label}
               </a>
             ))}
+
+            <button
+              type="button"
+              onClick={toggleLanguage}
+              className="mt-2 w-fit rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200 transition-colors hover:bg-white/[0.08] hover:text-white"
+            >
+              {language === "pl" ? "EN" : "PL"}
+            </button>
           </div>
         </div>
       )}

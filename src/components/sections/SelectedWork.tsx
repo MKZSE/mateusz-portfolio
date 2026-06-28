@@ -7,21 +7,38 @@ const technologies = [
   "REST API",
 ];
 
-function SelectedWork() {
+type SelectedWorkProps = {
+  content: {
+    label: string;
+    title: string;
+    description: string;
+    statusBadge: string;
+    projectType: string;
+    projectTitle: string;
+    projectDescription: string;
+    stats: {
+      label: string;
+      value: string;
+    }[];
+    technologiesTitle: string;
+    technologiesDescription: string;
+  };
+};
+
+function SelectedWork({ content }: SelectedWorkProps) {
   return (
     <>
-      <div className="mb-12 max-w-2xl md:mb-14">
+      <div className="mb-12 max-w-2xl md:mb-10">
         <span className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
-          Selected Work
+          {content.label}
         </span>
 
         <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-          Projects built with purpose
+          {content.title}
         </h2>
 
         <p className="mt-6 text-lg leading-8 text-slate-300">
-          I focus on projects that solve real problems and help people use
-          technology in a practical way.
+          {content.description}
         </p>
       </div>
 
@@ -31,53 +48,39 @@ function SelectedWork() {
         <div className="relative grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
           <div>
             <div className="mb-6 flex flex-wrap items-center gap-3">
-                <span className="rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300">
-                    In development
-                </span>
+              <span className="rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300">
+                {content.statusBadge}
+              </span>
 
-                <span className="text-sm text-slate-400">
-                    Mobile app + admin panel + backend API
-                </span>
+              <span className="text-sm text-slate-400">
+                {content.projectType}
+              </span>
             </div>
 
             <h3 className="text-3xl font-bold text-white md:text-4xl">
-              Pilgrimage Companion
+              {content.projectTitle}
             </h3>
 
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
-                A full-stack system designed to support pilgrimage organization.
-                It combines a mobile application, administrative panel, backend API
-                and relational database. The system includes daily schedules, route
-                management, stops, announcements, songbook and regulations.
+              {content.projectDescription}
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-black/10 p-4">
-                <p className="text-sm text-slate-400">Focus</p>
-                <p className="mt-2 font-semibold text-white">
-                  Real-world use
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-black/10 p-4">
-                <p className="text-sm text-slate-400">Role</p>
-                <p className="mt-2 font-semibold text-white">
-                  Mobile + web + API
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-black/10 p-4">
-                <p className="text-sm text-slate-400">Status</p>
-                <p className="mt-2 font-semibold text-white">
-                  In development
-                </p>
-              </div>
+              {content.stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-2xl border border-white/10 bg-black/10 p-4"
+                >
+                  <p className="text-sm text-slate-400">{stat.label}</p>
+                  <p className="mt-2 font-semibold text-white">{stat.value}</p>
+                </div>
+              ))}
             </div>
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-5 md:p-6">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
-              Technologies
+              {content.technologiesTitle}
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -93,9 +96,7 @@ function SelectedWork() {
 
             <div className="mt-8 border-t border-white/10 pt-6">
               <p className="text-sm leading-7 text-slate-400">
-                Built as a real-world project, not a tutorial. The system connects
-                a mobile experience for participants with an administrative interface
-                for organizers and a backend responsible for data management.
+                {content.technologiesDescription}
               </p>
             </div>
           </div>
