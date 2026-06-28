@@ -44,7 +44,7 @@ function App() {
 
       <Section
         id="projects"
-        scrollMargin="scroll-mt-20 md:scroll-mt-4"
+        scrollMargin="scroll-mt-20 md:scroll-mt-8"
         className="pt-8 pb-8 md:pt-10 md:pb-10"
         >
             <Container>
@@ -54,7 +54,7 @@ function App() {
 
       <Section
         id="journey"
-        scrollMargin="scroll-mt-20 md:scroll-mt-4"
+        scrollMargin="scroll-mt-20 md:scroll-mt-8"
         className="pt-8 pb-8 md:pt-10 md:pb-10"
         >
             <Container>
