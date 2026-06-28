@@ -2,7 +2,7 @@ import Button from "../ui/Button";
 
 function Hero() {
   return (
-    <div className="relative flex min-h-[calc(100vh-64px)] flex-col justify-start overflow-hidden pt-32 pb-16">
+    <div className="relative flex min-h-[calc(88vh-64px)] flex-col justify-start overflow-hidden pt-32 pb-10">
       <div className="pointer-events-none absolute right-0 top-1/2 hidden -translate-y-1/2 select-none text-[18rem] font-bold leading-none text-white/[0.03] lg:block">
         MK
       </div>
