@@ -4,21 +4,36 @@ import Section from "./components/layout/Section";
 
 import Hero from "./components/sections/Hero";
 import HowIWork from "./components/sections/HowIWork";
+import SelectedWork from "./components/sections/SelectedWork";
 
 function App() {
   return (
     <>
       <Navbar />
 
-        <Section className="pt-0 pb-4 md:pt-0 md:pb-6">
+        <Section className="pt-0 pb-0 md:pt-0 md:pb-0">
             <Container>
                 <Hero />
             </Container>
         </Section>
 
-        <Section id="approach" className="pt-4 md:pt-6">
+        <Section
+        id="approach"
+        scrollMargin="scroll-mt-20"
+        className="pt-8 pb-8 md:pt-10 md:pb-10"
+        >
             <Container>
                 <HowIWork />
+            </Container>
+        </Section>
+
+        <Section
+        id="projects"
+        scrollMargin="scroll-mt-4"
+        className="pt-8 md:pt-10"
+        >
+            <Container>
+                <SelectedWork />
             </Container>
         </Section>
     </>
