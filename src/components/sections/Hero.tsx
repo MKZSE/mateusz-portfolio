@@ -2,16 +2,16 @@ import Button from "../ui/Button";
 
 function Hero() {
   return (
-    <div className="relative flex min-h-[calc(88vh-64px)] flex-col justify-start overflow-hidden pt-32 pb-10">
+    <div className="relative flex min-h-[calc(88vh-64px)] flex-col justify-start overflow-hidden pt-28 pb-10 sm:pt-32">
       <div className="pointer-events-none absolute right-0 top-1/2 hidden -translate-y-1/2 select-none text-[18rem] font-bold leading-none text-white/[0.03] lg:block">
         MK
       </div>
 
-      <span className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-blue-300 sm:text-sm">
-        Web applications • Mobile apps • APIs
-      </span>
+        <span className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-300 sm:text-sm sm:tracking-[0.35em]">
+            Web apps • Mobile apps • APIs
+        </span>
 
-      <h1 className="max-w-4xl text-5xl font-bold leading-tight text-white sm:text-6xl md:text-7xl">
+      <h1 className="max-w-4xl text-[2.8rem] font-bold leading-tight text-white sm:text-6xl md:text-7xl">
         Building software
         <br />
         that solves
