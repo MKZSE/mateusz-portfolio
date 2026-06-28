@@ -10,13 +10,13 @@ type ButtonProps = {
 
 function Button({ children, href, variant = "primary" }: ButtonProps) {
   const baseClasses =
-    "inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition-all duration-200";
+    "inline-flex min-h-12 items-center justify-center rounded-full px-6 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5";
 
   const variantClasses = {
     primary:
-      "bg-blue-600 text-white hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-600/20",
+      "bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg shadow-blue-600/20 hover:shadow-blue-500/30",
     secondary:
-      "border border-white/10 bg-white/5 text-slate-200 hover:bg-white/10 hover:text-white",
+      "border border-white/10 bg-white/[0.04] text-slate-200 backdrop-blur hover:border-white/20 hover:bg-white/[0.08] hover:text-white",
   };
 
   return (
