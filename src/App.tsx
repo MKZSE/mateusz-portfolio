@@ -5,6 +5,7 @@ import Section from "./components/layout/Section";
 import Hero from "./components/sections/Hero";
 import HowIWork from "./components/sections/HowIWork";
 import SelectedWork from "./components/sections/SelectedWork";
+import Journey from "./components/sections/Journey";
 
 function App() {
   return (
@@ -30,10 +31,20 @@ function App() {
         <Section
         id="projects"
         scrollMargin="scroll-mt-4"
-        className="pt-8 md:pt-10"
+        className="pt-8 pb-8 md:pt-10 md:pb-10"
         >
             <Container>
                 <SelectedWork />
+            </Container>
+        </Section>
+
+        <Section
+        id="journey"
+        scrollMargin="scroll-mt-4"
+        className="pt-8 md:pt-10"
+        >
+            <Container>
+                <Journey />
             </Container>
         </Section>
     </>
