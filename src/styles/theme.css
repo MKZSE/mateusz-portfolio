@@ -1,0 +1,17 @@
+:root {
+  --color-background: #020617;
+  --color-surface: #0f172a;
+  --color-surface-soft: #111827;
+  --color-border: rgba(255, 255, 255, 0.1);
+
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+
+  --color-accent: #2563eb;
+  --color-accent-soft: rgba(37, 99, 235, 0.15);
+
+  --radius-card: 24px;
+  --radius-button: 999px;
+
+  --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
