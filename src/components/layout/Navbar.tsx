@@ -54,21 +54,41 @@ function Navbar({ nav, language, setLanguage }: NavbarProps) {
             type="button"
             onClick={toggleLanguage}
             className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200 transition-colors hover:bg-white/[0.08] hover:text-white"
+            aria-label={
+              language === "pl"
+                ? "Przełącz język na angielski"
+                : "Switch language to Polish"
+            }
           >
-            {language === "pl" ? "EN" : "PL"}
+            {language.toUpperCase()}
           </button>
         </div>
 
-        <button
-          type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white transition-colors hover:bg-white/[0.08] focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 md:hidden"
-          onClick={() => setIsOpen((current) => !current)}
-          aria-label="Toggle navigation menu"
-          aria-expanded={isOpen}
-          aria-controls="mobile-navigation"
-        >
-          <span className="text-lg leading-none">{isOpen ? "×" : "☰"}</span>
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200 transition-colors hover:bg-white/[0.08] hover:text-white"
+            aria-label={
+              language === "pl"
+                ? "Przełącz język na angielski"
+                : "Switch language to Polish"
+            }
+          >
+            {language.toUpperCase()}
+          </button>
+
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white transition-colors hover:bg-white/[0.08] focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+            onClick={() => setIsOpen((current) => !current)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
+          >
+            <span className="text-lg leading-none">{isOpen ? "×" : "☰"}</span>
+          </button>
+        </div>
       </div>
 
       {isOpen && (
@@ -87,14 +107,6 @@ function Navbar({ nav, language, setLanguage }: NavbarProps) {
                 {link.label}
               </a>
             ))}
-
-            <button
-              type="button"
-              onClick={toggleLanguage}
-              className="mt-2 w-fit rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200 transition-colors hover:bg-white/[0.08] hover:text-white"
-            >
-              {language === "pl" ? "EN" : "PL"}
-            </button>
           </div>
         </div>
       )}
